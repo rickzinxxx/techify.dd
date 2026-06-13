@@ -33,6 +33,15 @@ export const SERVICES: Service[] = [
 
 export const PROJECTS: Project[] = [
   {
+    id: 'yuffie',
+    title: 'Yuffie Kinetic Interface',
+    category: 'Portfólio',
+    description: 'Uma belíssima interface cinética interativa japonesa de alta fidelidade visual (v4). Possui fluxo contínuo de pétalas fluidas orientais reagindo ao mouse, reprodutor premium de áudio integrado com barra de progresso, e efeito parallax responsivo de movimentação gradual de multicamadas.',
+    imageUrl: 'https://u.cubeupload.com/zmonochrome/tumblr8b1866a9355004.jpg',
+    tags: ['React', 'Interactive Particle Canvas', 'HTML5 Audio Engine', 'Smooth Parallax LERP'],
+    certified: true
+  },
+  {
     id: 'asme',
     title: 'Asme',
     category: 'Landing Page',

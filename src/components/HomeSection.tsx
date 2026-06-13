@@ -73,31 +73,6 @@ export default function HomeSection({ onNavigate, onOpenConsultation }: HomeSect
         {/* Hero Section Content */}
         <section className="relative mx-auto max-w-7xl px-4 pt-16 text-center sm:px-6 lg:px-8 z-10 w-full">
           
-          {/* Large Techify Centerpiece Circle Logo */}
-          <motion.div 
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, type: 'spring' }}
-            className="mx-auto mb-6 flex h-28 w-28 items-center justify-center rounded-full border border-neutral-800 bg-black/60 p-5 shadow-[0_0_50px_rgba(57,255,20,0.18)] border-glow-green"
-          >
-            <div className="flex flex-col items-center">
-              <svg viewBox="0 0 100 100" className="h-12 w-12" fill="none">
-                <path
-                  d="M15,80 C30,70 35,30 50,45 C65,60 70,25 85,15"
-                  stroke="#39FF14"
-                  strokeWidth="11"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <circle cx="50" cy="45" r="9" fill="#a3e635" />
-                <circle cx="85" cy="15" r="9" fill="#a3e635" />
-              </svg>
-              <span className="mt-1 font-display text-[9px] font-black uppercase tracking-widest text-neutral-400">
-                TECHIFY
-              </span>
-            </div>
-          </motion.div>
-
           {/* Digital Innovation Pill Badge */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}

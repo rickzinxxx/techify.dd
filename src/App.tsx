@@ -6,15 +6,27 @@ import PortfolioSection from './components/PortfolioSection';
 import CareersSection from './components/CareersSection';
 import ConsultationModal from './components/ConsultationModal';
 import AsmeShowcase from './components/AsmeShowcase';
+import YuffieShowcase from './components/YuffieShowcase';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('inicio');
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
 
-  // If the active tab is asme, render the immersive full-screen cinematic demo
+  // If the active tab matches any of the immersive showcases, render them full-screen
   if (activeTab === 'asme') {
     return (
       <AsmeShowcase 
+        onBack={() => {
+          setActiveTab('portfolio');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }} 
+      />
+    );
+  }
+
+  if (activeTab === 'yuffie') {
+    return (
+      <YuffieShowcase 
         onBack={() => {
           setActiveTab('portfolio');
           window.scrollTo({ top: 0, behavior: 'smooth' });

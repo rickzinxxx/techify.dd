@@ -58,7 +58,7 @@ export default function Header({ activeTab, setActiveTab, onOpenConsultation }: 
                 }`}
               >
                 <IconComponent className="h-4 w-4" />
-                <span>{item.label}</span>
+                <span className="hidden sm:inline">{item.label}</span>
                 {isActive && (
                   <span className="absolute -bottom-[1px] left-1/4 right-1/4 h-[2px] bg-brand-accent" />
                 )}

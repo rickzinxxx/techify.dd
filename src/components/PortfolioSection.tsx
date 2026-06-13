@@ -190,8 +190,8 @@ export default function PortfolioSection({ onBackToHome, onLaunchDemo }: Portfol
                     {/* Access Site Project Button */}
                     <button
                       onClick={() => {
-                        if (proj.id === 'asme' && onLaunchDemo) {
-                          onLaunchDemo('asme');
+                        if ((proj.id === 'asme' || proj.id === 'yuffie') && onLaunchDemo) {
+                          onLaunchDemo(proj.id);
                         } else {
                           setSelectedProject(proj);
                         }
@@ -199,7 +199,7 @@ export default function PortfolioSection({ onBackToHome, onLaunchDemo }: Portfol
                       className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand-lime hover:bg-brand-accent text-black font-extrabold text-xs py-3 transition-all duration-300 shadow-[0_2px_15px_rgba(163,230,53,0.15)] group-hover:shadow-[0_2px_20px_rgba(163,230,53,0.3)] cursor-pointer"
                     >
                       <Globe className="h-4 w-4" />
-                      <span>{proj.id === 'asme' ? 'ABRIR DEMO LIVE ⚡' : 'ACESSAR SITE DO PROJETO'}</span>
+                      <span>{(proj.id === 'asme' || proj.id === 'yuffie') ? 'ABRIR DEMO LIVE ⚡' : 'ACESSAR SITE DO PROJETO'}</span>
                     </button>
                   </div>
 
@@ -296,11 +296,12 @@ export default function PortfolioSection({ onBackToHome, onLaunchDemo }: Portfol
                   >
                     Fechar Detalhes
                   </button>
-                  {selectedProject.id === 'asme' && onLaunchDemo ? (
+                  {((selectedProject.id === 'asme' || selectedProject.id === 'yuffie') && onLaunchDemo) ? (
                     <button
                       onClick={() => {
+                        const targetId = selectedProject.id;
                         setSelectedProject(null);
-                        onLaunchDemo('asme');
+                        onLaunchDemo(targetId);
                       }}
                       className="flex-1 flex items-center justify-center gap-2 rounded-xl bg-brand-lime hover:bg-brand-accent text-black font-extrabold text-xs py-3 transition-colors shadow-lg cursor-pointer"
                     >

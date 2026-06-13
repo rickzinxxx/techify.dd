@@ -171,7 +171,7 @@ export default function AsmeShowcase({ onBack }: AsmeShowcaseProps) {
         
         {/* Main Display Heading with custom Instrument Serif inline styling */}
         <h1 
-          className="text-5xl md:text-6xl lg:text-7xl text-white mb-8 tracking-tight whitespace-nowrap"
+          className="text-4xl xs:text-5xl md:text-6xl lg:text-7xl text-white mb-8 tracking-tight text-balance sm:whitespace-nowrap"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
           Built for the curious
