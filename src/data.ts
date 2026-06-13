@@ -42,75 +42,12 @@ export const PROJECTS: Project[] = [
     certified: true
   },
   {
-    id: 'asme',
-    title: 'Asme',
+    id: 'mugsys-mugs',
+    title: "Mugsy's Mugs",
     category: 'Landing Page',
-    description: 'Built for the curious. Uma landing page cinematográfica de altíssimo nível, utilizando fundos em vídeo full-screen com fade dinâmico via JS, tipografia clássica Instrument Serif e componentes em Glass Liquid de alta fidelidade visual.',
-    imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
-    tags: ['React', 'Instrument Serif', 'Liquid Glass', 'Custom Video Loop'],
-    certified: true
-  },
-  {
-    id: 'kaldi',
-    title: 'KALDI',
-    category: '3D Experience',
-    description: 'Uma experiência imersiva em 3D desenvolvida para a KALDI. Design agressivo, performance fluida e animações de alto nível que prendem o usuário do início ao fim.',
-    imageUrl: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=800',
-    tags: ['Svelte', 'Three.js', 'Tailwind', 'GSAP'],
-    certified: true
-  },
-  {
-    id: 'epic-designer',
-    title: 'EPIC DESIGNER',
-    category: 'Landing Page',
-    description: 'O EPIC DESIGNER é uma empresa especializada em design gráfico para o setor gastronômico, oferecendo serviços digitais, cardápios interativos e marcas inesquecíveis.',
-    imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&q=80&w=800',
-    tags: ['React', 'Framer Motion', 'Tailwind'],
-    certified: true
-  },
-  {
-    id: 'saude-connect',
-    title: 'Saude Connect',
-    category: 'Corporativo',
-    description: 'O site Saude Connect é uma plataforma corporativa dedicada a otimizar o atendimento à saúde dos colaboradores, oferecendo telemedicina ágil e monitoramento de bem-estar.',
-    imageUrl: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
-    tags: ['Next.js', 'PostgreSQL', 'Tailwind CSS'],
-    certified: true
-  },
-  {
-    id: 'senac-reciclagem',
-    title: 'Senac Reciclagem',
-    category: 'Corporativo',
-    description: 'O site Senac Reciclagem é uma plataforma educacional dedicada à conscientização ambiental, oferecendo informações sobre técnicas corretas de descarte e reciclagem.',
-    imageUrl: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800',
-    tags: ['React', 'Tailwind', 'Vite', 'Node.js'],
-    certified: true
-  },
-  {
-    id: 'vibe-sound',
-    title: 'VibeMusic Shop',
-    category: 'E-commerce',
-    description: 'Plataforma completa de varejo musical com reprodutor de prévia em alta definição, fluxo de checkout integrado e gestão de produtos escalável.',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800',
-    tags: ['Next.js', 'Stripe', 'Tailwind'],
-    certified: true
-  },
-  {
-    id: 'techify-academy',
-    title: 'Techify Academy',
-    category: 'Plataforma',
-    description: 'Nosso próprio portal de ensino totalmente responsivo e customizado que conecta alunos a cursos de tecnologia gerados por inteligência artificial.',
-    imageUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
-    tags: ['React', 'Express', 'D3.js'],
-    certified: true
-  },
-  {
-    id: 'crypto-dash',
-    title: 'CryptoSphere',
-    category: 'Outro',
-    description: 'Uma dashboard web de análise criptoeconômica em tempo real, monitorando taxas de queima, liquidez, e sentimentos de redes sociais através de IA.',
-    imageUrl: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800',
-    tags: ['React', 'Recharts', 'WebSockets'],
+    description: 'E-commerce premium e disruptivo projetado para coleções limitadas de canecas. Apresenta carrinho de compras interativo, transições de swipe contínuas, filtro de categoria dinâmico e modal de descrição de produtos de altíssima fidelidade estética.',
+    imageUrl: 'https://i.postimg.cc/1zN0rTcN/img-1.jpg',
+    tags: ['React', 'Interactive Cart Engine', 'Double Swipe Animations', 'Tailwind v4'],
     certified: true
   }
 ];

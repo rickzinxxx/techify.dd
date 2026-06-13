@@ -5,17 +5,17 @@ import HomeSection from './components/HomeSection';
 import PortfolioSection from './components/PortfolioSection';
 import CareersSection from './components/CareersSection';
 import ConsultationModal from './components/ConsultationModal';
-import AsmeShowcase from './components/AsmeShowcase';
 import YuffieShowcase from './components/YuffieShowcase';
+import MugsysMugsShowcase from './components/MugsysMugsShowcase';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>('inicio');
   const [isConsultationOpen, setIsConsultationOpen] = useState<boolean>(false);
 
   // If the active tab matches any of the immersive showcases, render them full-screen
-  if (activeTab === 'asme') {
+  if (activeTab === 'yuffie') {
     return (
-      <AsmeShowcase 
+      <YuffieShowcase 
         onBack={() => {
           setActiveTab('portfolio');
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -24,9 +24,9 @@ export default function App() {
     );
   }
 
-  if (activeTab === 'yuffie') {
+  if (activeTab === 'mugsys-mugs') {
     return (
-      <YuffieShowcase 
+      <MugsysMugsShowcase 
         onBack={() => {
           setActiveTab('portfolio');
           window.scrollTo({ top: 0, behavior: 'smooth' });
