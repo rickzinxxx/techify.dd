@@ -250,7 +250,7 @@ export default function YuffieShowcase({ onBack }: YuffieShowcaseProps) {
       {/* Core cinematic window frame container */}
       <div
         ref={containerRef}
-        className="w-full max-w-[1200px] h-auto lg:h-[620px] aspect-video border border-white/10 rounded-3xl relative overflow-hidden backdrop-blur-md shadow-2xl grid grid-cols-1 md:grid-cols-[45%_42%_13%] bg-[url('https://u.cubeupload.com/zmonochrome/tumblr8b1866a9355004.jpg')] bg-cover bg-center z-10"
+        className="w-full max-w-[1200px] h-auto md:h-[620px] md:aspect-video border border-white/10 rounded-3xl relative overflow-hidden backdrop-blur-md shadow-2xl grid grid-cols-1 md:grid-cols-[45%_42%_13%] bg-[url('https://u.cubeupload.com/zmonochrome/tumblr8b1866a9355004.jpg')] bg-cover bg-center z-10"
       >
         {/* Parallax / Gradient background overlays */}
         <div className="absolute inset-0 bg-[radial-gradient(circle,_transparent_35%,_rgba(6,6,8,0.92)_100%)] pointer-events-none z-10" />
@@ -278,7 +278,7 @@ export default function YuffieShowcase({ onBack }: YuffieShowcaseProps) {
         <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none z-[13]" />
 
         {/* --- LEFT SECTION: DIGITAL AUDIO ENGINE AND TITLE PANEL --- */}
-        <div className="p-6 md:p-8 flex flex-col justify-between z-20 bg-gradient-to-r from-[#060608]/98 via-[#460303]/60 to-transparent">
+        <div className="p-6 md:p-8 flex flex-col justify-between z-20 bg-black/90 md:bg-gradient-to-r md:from-[#060608]/98 md:via-[#460303]/60 md:to-transparent">
           
           {/* Fret Not text block badge */}
           <div className="border-l-4 border-amber-600 pl-3 leading-tight mb-8">
@@ -290,7 +290,7 @@ export default function YuffieShowcase({ onBack }: YuffieShowcaseProps) {
             <span className="text-white text-xs tracking-[6.5px] block font-black uppercase mb-1">ブレイジング・ブライト</span>
             <h1 
               style={{ textShadow: '2px 2px 0px #b5893d, 4px 4px 20px rgba(0,0,0,0.9)' }}
-              className="text-7xl md:text-8xl font-black text-white select-none leading-none tracking-tight font-serif"
+              className="text-6xl md:text-8xl font-black text-white select-none leading-none tracking-tight font-serif"
             >
               朝日
             </h1>
@@ -378,8 +378,8 @@ export default function YuffieShowcase({ onBack }: YuffieShowcaseProps) {
 
 
         {/* --- CENTER AREA: HIGH QUALITY PARALLAX CHARACTER GRAPHIC --- */}
-        <div className="relative flex items-center justify-center p-4 z-15">
-          <div className="w-11/12 h-[90%] border border-white/5 rounded-2xl relative overflow-hidden backdrop-blur-[3px] bg-gradient-to-tr from-cyan-950/5 via-neutral-950/20 to-transparent">
+        <div className="relative flex items-center justify-center p-4 z-15 h-80 md:h-auto">
+          <div className="w-full md:w-11/12 h-full md:h-[90%] border border-white/5 rounded-2xl relative overflow-hidden backdrop-blur-[3px] bg-gradient-to-tr from-cyan-950/5 via-neutral-950/20 to-transparent">
             {/* Ambient scanning laser overlay */}
             <div className="absolute left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-600/75 to-transparent z-[2] animate-[laser-scan_4.5s_linear_infinite]" />
             <span className="absolute top-2 left-2 text-white/[0.02] text-[15rem] font-black select-none pointer-events-none z-[1] leading-none">
@@ -399,7 +399,7 @@ export default function YuffieShowcase({ onBack }: YuffieShowcaseProps) {
               transform: `translateX(${parallaxOffset.x}px) translateY(${parallaxOffset.y}px)`,
               transition: 'transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
             }}
-            className="absolute bottom-4 left-[-15%] w-[130%] h-[110%] pointer-events-none z-20 will-change-transform"
+            className="absolute bottom-4 left-[-10%] md:left-[-15%] w-[120%] md:w-[130%] h-full md:h-[110%] pointer-events-none z-20 will-change-transform"
           >
             <img
               src="https://u.cubeupload.com/zmonochrome/b00chisarenderwuthering.png"
@@ -411,7 +411,7 @@ export default function YuffieShowcase({ onBack }: YuffieShowcaseProps) {
 
 
         {/* --- RIGHT COLUMN: CHERRY LABELS AND TECHNICAL SPECIFICATIONS PANEL --- */}
-        <div className="p-6 md:p-8 flex flex-col justify-between items-center z-20 bg-gradient-to-l from-black/50 to-transparent border-l border-white/5">
+        <div className="hidden md:flex p-6 md:p-8 flex-col justify-between items-center z-20 bg-gradient-to-l from-black/50 to-transparent border-l border-white/5">
           
           <div className="border border-white/20 select-none rounded-full px-4 py-1 text-[9px] font-extrabold uppercase tracking-widest bg-white/[0.02] text-slate-200">
             YUFFIE

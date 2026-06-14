@@ -13,6 +13,33 @@ export default function ToonHub() {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    
+    if (isLeftSwipe) {
+      navigate('next');
+    } else if (isRightSwipe) {
+      navigate('prev');
+    }
+  };
+
   // Preload all images on mount
   useEffect(() => {
     CHARACTERS.forEach((item) => {
@@ -57,7 +84,12 @@ export default function ToonHub() {
       }}
       className="relative w-full overflow-hidden"
     >
-      <div className="relative w-full h-[100vh] overflow-hidden">
+      <div 
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        className="relative w-full h-[100vh] overflow-hidden"
+      >
         {/* 1. Grain overlay */}
         <div
           style={{
